@@ -24,7 +24,6 @@ public class FilmsManager {
     public NameFilm[] findAll() { return films; }
 
     public NameFilm[] findLast() {
-        int limit = 10;
         NameFilm[] ans;
         if (limit < films.length) {
             ans = new NameFilm[limit];

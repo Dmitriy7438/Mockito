@@ -68,4 +68,25 @@ public class FilmsManagerTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
+
+    @Test
+    public void myTest4() {
+        FilmsManager manager = new FilmsManager(5);
+        manager.save(first);
+        manager.save(second);
+        manager.save(third);
+        manager.save(fourth);
+        manager.save(fifth);
+        manager.save(sixth);
+        manager.save(seventh);
+        manager.save(eighth);
+        manager.save(ninth);
+        manager.save(tenth);
+        manager.save(eleventh);
+
+        NameFilm[] actual = manager.findLast();
+        NameFilm[] expected = {eleventh, tenth, ninth, eighth, seventh};
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
 }
